@@ -1,3 +1,4 @@
+// Displays each post on the webpage
 function displayPosts(posts) {
     const postList = document.getElementById("post-list");
 
@@ -16,7 +17,7 @@ function displayPosts(posts) {
         postList.appendChild(li);
     });
 }
-
+// Gets posts from the API using async and await
 async function fetchPosts() {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
     const posts = await response.json();
@@ -24,5 +25,5 @@ async function fetchPosts() {
     displayPosts(posts);
 
 }
-
+// Starts the program
 fetchPosts();
